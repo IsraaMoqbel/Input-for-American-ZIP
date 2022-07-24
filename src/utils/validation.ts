@@ -1,6 +1,8 @@
+import { USZipCodeRegEx } from "../constants";
+
 export const validateZipCode = (zipCode: number = 0, isTouched: boolean) => {
   if (isTouched) {
-    const isZipValid = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zipCode.toString());
+    const isZipValid = USZipCodeRegEx.test(zipCode.toString());
     if (zipCode.toString().length !== 5) {
       return "ZIP code must be 5 digits.";
     } else if (!isZipValid) {

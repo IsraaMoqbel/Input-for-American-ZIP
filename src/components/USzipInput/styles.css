@@ -13,7 +13,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .error {
-  color: red;
+  color: var(--red);
   margin: 0;
   line-height: 1;
   height: 1rem;
@@ -24,7 +24,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .input {
   border: none;
-  border: 1px solid black;
+  border: 1px solid var(--blue);
   padding: 5px;
   outline: none;
   min-width: 300px;
@@ -32,15 +32,19 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
 }
 
+.input::placeholder {
+  color: var(--light-blue);
+}
+
 .input:focus {
   outline: none;
-  border: 2px solid black;
+  border: 2px solid var(--blue);
 }
 
 .invalid {
-  border: 1px solid red;
+  border: 1px solid var(--red);
 }
 
 .invalid:focus {
-  border: 2px solid red;
+  border: 2px solid var(--red);
 }

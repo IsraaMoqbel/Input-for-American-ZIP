@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { validateZipCode } from "../../utils/validation";
 import * as _ from "lodash";
 import classnames from "classnames";
+import { debounceDelay } from "../../constants";
 
 export default function USzipInput({ value, onChange }: IUSzipInput) {
   const [isTouched, setIsTouched] = useState(false);
@@ -12,7 +13,7 @@ export default function USzipInput({ value, onChange }: IUSzipInput) {
     if (value) {
       const debounce = _.debounce(() => {
         setIsTouched(true);
-      }, 2000);
+      }, debounceDelay);
       debounce();
     }
     setIsTouched(false);
