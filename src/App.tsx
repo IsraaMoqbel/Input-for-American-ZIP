@@ -8,9 +8,9 @@ export default function App() {
     SetStateAction<number> | undefined | any
   ] = useState("");
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="app">
+      <h1>American ZIP Code Validator</h1>
+      <p>Demo for American ZIP code input with validation</p>
       <USzipInput value={zipCode} onChange={setZipCode} />
     </div>
   );

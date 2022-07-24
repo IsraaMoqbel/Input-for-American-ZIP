@@ -1,7 +1,11 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Hind+Vadodara&display=swap");
+
+* {
+  font-family: "Hind Vadodara", sans-serif;
   box-sizing: border-box;
 }
-.App {
+
+.app {
   font-family: sans-serif;
   text-align: center;
 }
